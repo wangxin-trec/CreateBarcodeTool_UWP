@@ -296,6 +296,7 @@ namespace CreateBarCodeTool {
                 } catch (Exception ex) {
                     memberType = "error";
                     money = "error";
+                    point = "error";
                     pointCanUse = "error";
                 } finally{
                     hideLoading();
