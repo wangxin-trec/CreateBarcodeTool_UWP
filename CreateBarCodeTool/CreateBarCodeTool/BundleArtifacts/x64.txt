@@ -1,0 +1,2 @@
+MainPackage=F:\myproject\CreateBarCodeTool\CreateBarCodeTool\bin\x64\Release\CreateBarCodeTool_1.0.0.0_x64.appx
+SymbolPackage=C:\Users\10153702\Desktop\CreateBarCodeTool_1.0.0.0_Test\CreateBarCodeTool_1.0.0.0_x64.appxsym
