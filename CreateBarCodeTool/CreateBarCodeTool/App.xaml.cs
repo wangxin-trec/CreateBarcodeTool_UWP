@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CreateBarCodeTool.Utils;
+using System;
 using Windows.ApplicationModel;
 using Windows.ApplicationModel.Activation;
 using Windows.Foundation;
@@ -22,6 +23,11 @@ namespace CreateBarCodeTool
         {
             this.InitializeComponent();
             this.Suspending += OnSuspending;
+            DataBaseUtil dataBase = DataBaseUtil.getSingleton();
+            dataBase.createTable();
+            if (!dataBase.isTableDataExists()) {
+                dataBase.initTable();
+            }
         }
 
         /// <summary>

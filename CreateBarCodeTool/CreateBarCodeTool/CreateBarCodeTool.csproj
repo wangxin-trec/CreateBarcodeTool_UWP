@@ -106,7 +106,9 @@
     <Compile Include="SimpleModePage.xaml.cs">
       <DependentUpon>SimpleModePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Utils\BarcodeDBSchema.cs" />
     <Compile Include="Utils\BarcodeUtil.cs" />
+    <Compile Include="Utils\DataBaseUtil.cs" />
     <Compile Include="Utils\HttpCaller.cs" />
     <Compile Include="Utils\JsonAnalyst.cs" />
     <Compile Include="Utils\RequestParam.cs" />
@@ -141,7 +143,11 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <SDKReference Include="SQLite.UWP.2015, Version=3.33.0">
+      <Name>SQLite for Universal Windows Platform</Name>
+    </SDKReference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>

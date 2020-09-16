@@ -17,33 +17,6 @@ namespace CreateBarCodeTool {
 
         private static string swingCardStart  = "?1300000613881";
         private static string swingCardEnd    = "00000000000;";
-        private static string TEST_ONE        = "2960000000012";
-        private static string TEST_TWO        = "2960000000029";
-        private static string TEST_THREE      = "2960000000036";
-        private static string TEST_FOUR       = "2960000000043";
-        private static string TEST_FIVE       = "2960000000050";
-        private static string TEST_SIX        = "2960000000067";
-        private static string TEST_SEVEN      = "2960000000074";
-        private static string TEST_EIGHT      = "2960000000081";
-        private static string TEST_NINE       = "2960000000098";
-
-        private static string TWOFIVEJAN      = "2531446000999";
-        private static string TWENTYFORBIDDEN = "4902210170510";
-        private static string DRUG            = "4987774264288";
-        private static string SECURITY        = "4972940601189";
-        private static string DISCOUNT        = "25000010279001000302";
-        private static string HEAD0           = "080686816072";
-        private static string POSA            = "45802958260810006375028312416600";
-        private static string MARUKYU         = "7130207110001939";
-        private static string TAMARU          = "4522646331332";
-        private static string BRANDSWITCH     = "4902388057026";
-        private static string TIMESCOUPON     = "4522646735680";
-        private static string PERIOD          = "4930726000175";
-        private static string CAMPAIN         = "4902102077354";
-        private static string BAG             = "4522646330991";
-        private static string ZEROPRICE       = "4908819933402";
-        private static string GATE            = "000000010061";
-        private static string STAFF           = "2000100764206";
 
         public SimpleModePage() {
             this.InitializeComponent();
@@ -53,106 +26,106 @@ namespace CreateBarCodeTool {
         }
 
         private void btn_testOne_Click(object sender, RoutedEventArgs e) {
-            backToMainPage(TEST_ONE);
+            backToMainPage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TESTONE));
         }
 
         private void btn_testTwo_Click(object sender, RoutedEventArgs e) {
-            backToMainPage(TEST_TWO);
+            backToMainPage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TESTTWO));
         }
 
         private void btn_testThree_Click(object sender, RoutedEventArgs e) {
-            backToMainPage(TEST_THREE);
+            backToMainPage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TESTTHREE));
         }
 
         private void btn_testFour_Click(object sender, RoutedEventArgs e) {
-            backToMainPage(TEST_FOUR);
+            backToMainPage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TESTFOUR));
         }
 
         private void btn_testFive_Click(object sender, RoutedEventArgs e) {
-            backToMainPage(TEST_FIVE);
+            backToMainPage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TESTFIVE));
         }
 
         private void btn_testSix_Click(object sender, RoutedEventArgs e) {
-            backToMainPage(TEST_SIX);
+            backToMainPage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TESTSIX));
         }
 
         private void btn_testSeven_Click(object sender, RoutedEventArgs e) {
-            backToMainPage(TEST_SEVEN);
+            backToMainPage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TESTSEVEN));
         }
 
         private void btn_testEight_Click(object sender, RoutedEventArgs e) {
-            backToMainPage(TEST_EIGHT);
+            backToMainPage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TESTEIGHT));
         }
 
         private void btn_testNine_Click(object sender, RoutedEventArgs e) {
-            backToMainPage(TEST_NINE);
+            backToMainPage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TESTNINE));
         }
 
         private void btn_25Jan_Click(object sender, RoutedEventArgs e) {
-            backToMainPageByProduct(TWOFIVEJAN);
+            backToMainPageByProduct(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TWOFIVEJAN));
         }
         private void btn_twentyForbidden_Click(object sender, RoutedEventArgs e) {
-            backToMainPageByProduct(TWENTYFORBIDDEN);
+            backToMainPageByProduct(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TWENTYFORBIDDEN));
         }
 
         private void btn_drug_Click(object sender, RoutedEventArgs e) {
-            backToMainPageByProduct(DRUG);
+            backToMainPageByProduct(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.DRUG));
         }
 
         private void btn_security_Click(object sender, RoutedEventArgs e) {
-            backToMainPageByProduct(SECURITY);
+            backToMainPageByProduct(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.SECURITY));
         }
 
         private void btn_discount_Click(object sender, RoutedEventArgs e) {
-            backToMainPageByProduct(DISCOUNT);
+            backToMainPageByProduct(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.DISCOUNT));
         }
 
         private void btn_head0_Click(object sender, RoutedEventArgs e) {
-            backToMainPageByProduct(HEAD0);
+            backToMainPageByProduct(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.HEAD0));
         }
 
         private void btn_POSA_Click(object sender, RoutedEventArgs e) {
-            backToMainPageByProduct(POSA);
+            backToMainPageByProduct(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.POSA));
         }
 
         private void btn_marukyu_Click(object sender, RoutedEventArgs e) {
-            backToMainPageByProduct(MARUKYU);
+            backToMainPageByProduct(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.MARUKYU));
         }
 
         private void btn_tamaruCoupon_Click(object sender, RoutedEventArgs e) {
-            backToMainPageByProduct(TAMARU);
+            backToMainPageByProduct(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TAMARU));
         }
 
         private void btn_brandSwich_Click(object sender, RoutedEventArgs e) {
-            backToMainPageByProduct(BRANDSWITCH);
+            backToMainPageByProduct(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.BRANDSWITCH));
         }
 
         private void btn_timesCoupon_Click(object sender, RoutedEventArgs e) {
-            backToMainPageByProduct(TIMESCOUPON);
+            backToMainPageByProduct(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TIMESCOUPON));
         }
 
         private void btn_period_Click(object sender, RoutedEventArgs e) {
-            backToMainPageByProduct(PERIOD);
+            backToMainPageByProduct(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.PERIOD));
         }
 
         private void btn_campain_Click(object sender, RoutedEventArgs e) {
-            backToMainPageByProduct(CAMPAIN);
+            backToMainPageByProduct(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.CAMPAIN));
         }
 
         private void btn_bag_Click(object sender, RoutedEventArgs e) {
-            backToMainPageByProduct(BAG);
+            backToMainPageByProduct(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.BAG));
         }
 
         private void btn_zeroPrice_Click(object sender, RoutedEventArgs e) {
-            backToMainPageByProduct(ZEROPRICE);
+            backToMainPageByProduct(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.ZEROPRICE));
         }
 
         private void btn_gate_Click(object sender, RoutedEventArgs e) {
-            backToMainPageByProduct(GATE);
+            backToMainPageByProduct(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.GATE));
         }
 
         private void btn_staff_Click(object sender, RoutedEventArgs e) {
-            backToMainPageByProduct(STAFF);
+            backToMainPageByProduct(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.STAFF));
         }
 
         private async void backToMainPage(string testCardNumber) {
@@ -187,7 +160,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showPrePaidCardMessage(TEST_ONE,"1111");
+                    showPrePaidCardMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TESTONE), "1111");
                 }
             }
         }
@@ -196,7 +169,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showPrePaidCardMessage(TEST_TWO,"2222");
+                    showPrePaidCardMessage(BarcodeDBSchema.BarcodeTable.Cols.TESTTWO,"2222");
                 }
             }
         }
@@ -205,7 +178,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showPrePaidCardMessage(TEST_THREE,"3333");
+                    showPrePaidCardMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TESTTHREE), "3333");
                 }
             }
         }
@@ -214,7 +187,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showPrePaidCardMessage(TEST_FOUR,"4444");
+                    showPrePaidCardMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TESTFOUR), "4444");
                 }
             }
         }
@@ -223,7 +196,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showPrePaidCardMessage(TEST_FIVE,"5555");
+                    showPrePaidCardMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TESTFIVE), "5555");
                 }
             }
         }
@@ -232,7 +205,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showPrePaidCardMessage(TEST_SIX,"6666");
+                    showPrePaidCardMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TESTSIX), "6666");
                 }
             }
         }
@@ -241,7 +214,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showPrePaidCardMessage(TEST_SEVEN,"7777");
+                    showPrePaidCardMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TESTSEVEN), "7777");
                 }
             }
         }
@@ -250,7 +223,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showPrePaidCardMessage(TEST_EIGHT,"8888");
+                    showPrePaidCardMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TESTEIGHT), "8888");
                 }
             }
         }
@@ -259,7 +232,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showPrePaidCardMessage(TEST_NINE,"9999");
+                    showPrePaidCardMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TESTNINE), "9999");
                 }
             }
         }
@@ -268,7 +241,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(TWOFIVEJAN);
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TWOFIVEJAN));
                 }
             }
         }
@@ -277,7 +250,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(TWENTYFORBIDDEN);
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TWENTYFORBIDDEN));
                 }
             }
         }
@@ -286,7 +259,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(DRUG);
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.DRUG));
                 }
             }
         }
@@ -295,7 +268,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(SECURITY);
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.SECURITY));
                 }
             }
         }
@@ -304,7 +277,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(DISCOUNT);
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.DISCOUNT));
                 }
             }
         }
@@ -313,7 +286,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(HEAD0);
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.HEAD0));
                 }
             }
         }
@@ -322,7 +295,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(POSA);
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.POSA));
                 }
             }
         }
@@ -331,7 +304,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(MARUKYU);
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.MARUKYU));
                 }
             }
         }
@@ -340,7 +313,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(TAMARU);
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TAMARU));
                 }
             }
         }
@@ -349,7 +322,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(BRANDSWITCH);
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.BRANDSWITCH));
                 }
             }
         }
@@ -358,7 +331,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(TIMESCOUPON);
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TIMESCOUPON));
                 }
             }
         }
@@ -367,7 +340,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(PERIOD);
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.PERIOD));
                 }
             }
         }
@@ -376,7 +349,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(BAG);
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.BAG));
                 }
             }
         }
@@ -385,7 +358,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(ZEROPRICE);
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.ZEROPRICE));
                 }
             }
         }
@@ -394,7 +367,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(CAMPAIN);
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.CAMPAIN));
                 }
             }
         }
@@ -403,7 +376,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(GATE);
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.GATE));
                 }
             }
         }
@@ -412,7 +385,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(STAFF);
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.STAFF));
                 }
             }
         }
