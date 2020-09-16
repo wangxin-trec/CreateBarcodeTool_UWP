@@ -42,6 +42,7 @@ namespace CreateBarCodeTool {
         private static string CAMPAIN         = "4902102077354";
         private static string BAG             = "4522646330991";
         private static string ZEROPRICE       = "4908819933402";
+        private static string GATE            = "000000010061";
         private static string STAFF           = "2000100764206";
 
         public SimpleModePage() {
@@ -146,6 +147,10 @@ namespace CreateBarCodeTool {
             backToMainPageByProduct(ZEROPRICE);
         }
 
+        private void btn_gate_Click(object sender, RoutedEventArgs e) {
+            backToMainPageByProduct(GATE);
+        }
+
         private void btn_staff_Click(object sender, RoutedEventArgs e) {
             backToMainPageByProduct(STAFF);
         }
@@ -182,7 +187,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showMessage(TEST_ONE,"1111");
+                    showPrePaidCardMessage(TEST_ONE,"1111");
                 }
             }
         }
@@ -191,7 +196,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showMessage(TEST_TWO,"2222");
+                    showPrePaidCardMessage(TEST_TWO,"2222");
                 }
             }
         }
@@ -200,7 +205,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showMessage(TEST_THREE,"3333");
+                    showPrePaidCardMessage(TEST_THREE,"3333");
                 }
             }
         }
@@ -209,7 +214,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showMessage(TEST_FOUR,"4444");
+                    showPrePaidCardMessage(TEST_FOUR,"4444");
                 }
             }
         }
@@ -218,7 +223,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showMessage(TEST_FIVE,"5555");
+                    showPrePaidCardMessage(TEST_FIVE,"5555");
                 }
             }
         }
@@ -227,7 +232,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showMessage(TEST_SIX,"6666");
+                    showPrePaidCardMessage(TEST_SIX,"6666");
                 }
             }
         }
@@ -236,7 +241,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showMessage(TEST_SEVEN,"7777");
+                    showPrePaidCardMessage(TEST_SEVEN,"7777");
                 }
             }
         }
@@ -245,7 +250,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showMessage(TEST_EIGHT,"8888");
+                    showPrePaidCardMessage(TEST_EIGHT,"8888");
                 }
             }
         }
@@ -254,12 +259,172 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showMessage(TEST_NINE,"9999");
+                    showPrePaidCardMessage(TEST_NINE,"9999");
                 }
             }
         }
 
-        private void showMessage(string memberid, string pincode) {
+        private void btn_25Jan_PointerPressed(object sender, PointerRoutedEventArgs e) {
+            if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
+                var properties = e.GetCurrentPoint(this).Properties;
+                if (properties.IsRightButtonPressed) {
+                    showJanCodeMessage(TWOFIVEJAN);
+                }
+            }
+        }
+
+        private void btn_twentyForbidden_PointerPressed(object sender, PointerRoutedEventArgs e) {
+            if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
+                var properties = e.GetCurrentPoint(this).Properties;
+                if (properties.IsRightButtonPressed) {
+                    showJanCodeMessage(TWENTYFORBIDDEN);
+                }
+            }
+        }
+
+        private void btn_drug_PointerPressed(object sender, PointerRoutedEventArgs e) {
+            if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
+                var properties = e.GetCurrentPoint(this).Properties;
+                if (properties.IsRightButtonPressed) {
+                    showJanCodeMessage(DRUG);
+                }
+            }
+        }
+
+        private void btn_security_PointerPressed(object sender, PointerRoutedEventArgs e) {
+            if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
+                var properties = e.GetCurrentPoint(this).Properties;
+                if (properties.IsRightButtonPressed) {
+                    showJanCodeMessage(SECURITY);
+                }
+            }
+        }
+
+        private void btn_discount_PointerPressed(object sender, PointerRoutedEventArgs e) {
+            if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
+                var properties = e.GetCurrentPoint(this).Properties;
+                if (properties.IsRightButtonPressed) {
+                    showJanCodeMessage(DISCOUNT);
+                }
+            }
+        }
+
+        private void btn_head0_PointerPressed(object sender, PointerRoutedEventArgs e) {
+            if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
+                var properties = e.GetCurrentPoint(this).Properties;
+                if (properties.IsRightButtonPressed) {
+                    showJanCodeMessage(HEAD0);
+                }
+            }
+        }
+
+        private void btn_POSA_PointerPressed(object sender, PointerRoutedEventArgs e) {
+            if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
+                var properties = e.GetCurrentPoint(this).Properties;
+                if (properties.IsRightButtonPressed) {
+                    showJanCodeMessage(POSA);
+                }
+            }
+        }
+
+        private void btn_marukyu_PointerPressed(object sender, PointerRoutedEventArgs e) {
+            if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
+                var properties = e.GetCurrentPoint(this).Properties;
+                if (properties.IsRightButtonPressed) {
+                    showJanCodeMessage(MARUKYU);
+                }
+            }
+        }
+
+        private void btn_tamaruCoupon_PointerPressed(object sender, PointerRoutedEventArgs e) {
+            if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
+                var properties = e.GetCurrentPoint(this).Properties;
+                if (properties.IsRightButtonPressed) {
+                    showJanCodeMessage(TAMARU);
+                }
+            }
+        }
+
+        private void btn_brandSwich_PointerPressed(object sender, PointerRoutedEventArgs e) {
+            if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
+                var properties = e.GetCurrentPoint(this).Properties;
+                if (properties.IsRightButtonPressed) {
+                    showJanCodeMessage(BRANDSWITCH);
+                }
+            }
+        }
+
+        private void btn_timesCoupon_PointerPressed(object sender, PointerRoutedEventArgs e) {
+            if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
+                var properties = e.GetCurrentPoint(this).Properties;
+                if (properties.IsRightButtonPressed) {
+                    showJanCodeMessage(TIMESCOUPON);
+                }
+            }
+        }
+
+        private void btn_period_PointerPressed(object sender, PointerRoutedEventArgs e) {
+            if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
+                var properties = e.GetCurrentPoint(this).Properties;
+                if (properties.IsRightButtonPressed) {
+                    showJanCodeMessage(PERIOD);
+                }
+            }
+        }
+
+        private void btn_bag_PointerPressed(object sender, PointerRoutedEventArgs e) {
+            if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
+                var properties = e.GetCurrentPoint(this).Properties;
+                if (properties.IsRightButtonPressed) {
+                    showJanCodeMessage(BAG);
+                }
+            }
+        }
+
+        private void btn_zeroPrice_PointerPressed(object sender, PointerRoutedEventArgs e) {
+            if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
+                var properties = e.GetCurrentPoint(this).Properties;
+                if (properties.IsRightButtonPressed) {
+                    showJanCodeMessage(ZEROPRICE);
+                }
+            }
+        }
+
+        private void btn_campain_PointerPressed(object sender, PointerRoutedEventArgs e) {
+            if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
+                var properties = e.GetCurrentPoint(this).Properties;
+                if (properties.IsRightButtonPressed) {
+                    showJanCodeMessage(CAMPAIN);
+                }
+            }
+        }
+
+        private void btn_gate_PointerPressed(object sender, PointerRoutedEventArgs e) {
+            if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
+                var properties = e.GetCurrentPoint(this).Properties;
+                if (properties.IsRightButtonPressed) {
+                    showJanCodeMessage(GATE);
+                }
+            }
+        }
+
+        private void btn_staff_PointerPressed(object sender, PointerRoutedEventArgs e) {
+            if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
+                var properties = e.GetCurrentPoint(this).Properties;
+                if (properties.IsRightButtonPressed) {
+                    showJanCodeMessage(STAFF);
+                }
+            }
+        }
+
+        private async void showJanCodeMessage(string janCode) {
+            MessageDialog dialog = new MessageDialog("このボタンのJANは： " + janCode, "メッセージ");
+            dialog.Commands.Add(new UICommand("OK", cmd => { }, commandId: 0));
+            dialog.Commands.Add(new UICommand("改修", cmd => { }, commandId: 1));
+            await dialog.ShowAsync();
+        }
+
+        private async void showPrePaidCardMessage(string memberid, string pincode) {
             MessageDialog dialog = new MessageDialog("プリペイドカードの情報を取得たいですか？", "メッセージ");
             dialog.Commands.Add(new UICommand("Yes", async cmd => {
                 showLoading();
@@ -271,7 +436,7 @@ namespace CreateBarCodeTool {
                 string pointCanUse = "";
                 try {
                     result = await new HttpCaller().CallAppService(RequestParam.getGoldUserParam(memberid), RequestParam.getGoldUserUrl());
-                    memberInfoResult = await new HttpCaller().CallAppService(RequestParam.get4URequestParam(memberid, pincode),RequestParam.get4URequestURL());
+                    memberInfoResult = await new HttpCaller().CallAppService(RequestParam.get4URequestParam(memberid, pincode), RequestParam.get4URequestURL());
                     money = memberInfoResult.GetFourthLevelValue("CurrentState", "Transaction", "PrepayedCardInfo", "AmountsAvailable");
                     point = memberInfoResult.GetFourthLevelValue("CurrentState", "Transaction", "PointCardInfo", "AmountsAvailable");
                     if ("".Equals(point)) {
@@ -298,13 +463,13 @@ namespace CreateBarCodeTool {
                     money = "error";
                     point = "error";
                     pointCanUse = "error";
-                } finally{
+                } finally {
                     hideLoading();
                     showMemberInfo(memberid, memberType, money, point, pointCanUse);
                 }
             }, commandId: 0));
             dialog.Commands.Add(new UICommand("No", cmd => { }, commandId: 1));
-            dialog.ShowAsync();
+            await dialog.ShowAsync();
         }
 
         private void showLoading() {
@@ -317,21 +482,21 @@ namespace CreateBarCodeTool {
             this.GridLoading.Visibility = Visibility.Collapsed;
         }
 
-        private void showMemberInfo(string memberid,string memberType,string money,string point,string pointCanUse) {
-            string memeberInfo = "カードの番号: " + memberid    + "\n";
-            memeberInfo 　　　+= "ユーザー種類: " + memberType  + "\n";
-            memeberInfo       += "プリカの残高: " + money       + "\n";
-            memeberInfo       += "ポイント残高: " + point       + "\n";
-            memeberInfo       += "ポイント利用: " + pointCanUse + "\n";
+        private async void showMemberInfo(string memberid, string memberType, string money, string point, string pointCanUse) {
+            string memeberInfo = "カードの番号: " + memberid + "\n";
+                  memeberInfo += "ユーザー種類: " + memberType + "\n";
+                  memeberInfo += "プリカの残高: " + money + "\n";
+                  memeberInfo += "ポイント残高: " + point + "\n";
+                  memeberInfo += "ポイント利用: " + pointCanUse + "\n";
             MessageDialog dialog = new MessageDialog(memeberInfo, "Member情報");
-            dialog.Commands.Add(new UICommand("OK", cmd => {}, commandId: 0));
-            dialog.ShowAsync();
+            dialog.Commands.Add(new UICommand("OK", cmd => { }, commandId: 0));
+            await dialog.ShowAsync();
         }
 
-        private void showError(Exception ex) {
+        private async void showError(Exception ex) {
             MessageDialog dialog = new MessageDialog(ex.Message, "エラー");
             dialog.Commands.Add(new UICommand("OK", cmd => { }, commandId: 0));
-            dialog.ShowAsync();
+            await dialog.ShowAsync();
         }
 
         private void btn_backToMain_Click(object sender, RoutedEventArgs e) {

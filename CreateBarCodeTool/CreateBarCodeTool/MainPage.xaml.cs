@@ -51,16 +51,16 @@ namespace CreateBarCodeTool
             }
         }
 
-        private void showError(Exception ex) {
+        private async void showError(Exception ex) {
             MessageDialog dialog = new MessageDialog(ex.Message, "エラー");
             dialog.Commands.Add(new UICommand("OK", cmd => { }, commandId: 0));
-            dialog.ShowAsync();
+            await dialog.ShowAsync();
         }
 
-        private void showHelp(string help) {
+        private async void showHelp(string help) {
             MessageDialog dialog = new MessageDialog(help, "Help");
             dialog.Commands.Add(new UICommand("OK", cmd => { }, commandId: 0));
-            dialog.ShowAsync();
+            await dialog.ShowAsync();
         }
 
         private void tbx_inputBarcode_KeyDown(object sender, Windows.UI.Xaml.Input.KeyRoutedEventArgs e) {
