@@ -99,7 +99,11 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Dto\GlobalFlag.cs" />
     <Compile Include="Dto\JanBindButton.cs" />
+    <Compile Include="helpPage.xaml.cs">
+      <DependentUpon>helpPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="JanReset.xaml.cs">
       <DependentUpon>JanReset.xaml</DependentUpon>
     </Compile>
@@ -132,12 +136,17 @@
     <Content Include="Assets\Square44x44Logo.targetsize-24_altform-unplated.png" />
     <Content Include="Assets\StoreLogo.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
+    <Content Include="Assets\readme.md" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="helpPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="JanReset.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
