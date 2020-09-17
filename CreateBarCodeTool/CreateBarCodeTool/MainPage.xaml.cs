@@ -1,9 +1,17 @@
 ﻿using CreateBarCodeTool.Utils;
 using System;
+using System.Collections.Generic;
+using System.Runtime.InteropServices.WindowsRuntime;
+using Windows.Graphics.Imaging;
+using Windows.Storage;
+using Windows.Storage.Pickers;
+using Windows.Storage.Streams;
 using Windows.System;
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
+using Windows.UI.Xaml.Input;
+using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Xaml.Navigation;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
@@ -56,7 +64,7 @@ namespace CreateBarCodeTool
             await dialog.ShowAsync();
         }
 
-        private void tbx_inputBarcode_KeyDown(object sender, Windows.UI.Xaml.Input.KeyRoutedEventArgs e) {
+        private void tbx_inputBarcode_KeyDown(object sender, KeyRoutedEventArgs e) {
             if (VirtualKey.Enter == e.Key && e.KeyStatus.RepeatCount == 0) {
                 string content = this.tbx_inputBarcode.Text;
                 showResult(content);
@@ -66,6 +74,62 @@ namespace CreateBarCodeTool
         private void btn_help_Click(object sender, RoutedEventArgs e) {
             Frame root = Window.Current.Content as Frame;
             root.Navigate(typeof(helpPage));
+        }
+
+        private async void saveImage(Image image) {
+            var rtb = new RenderTargetBitmap();
+            await rtb.RenderAsync(image);
+            var saveFile = new FileSavePicker();
+            saveFile.SuggestedStartLocation = PickerLocationId.PicturesLibrary;
+            saveFile.FileTypeChoices.Add("JPEG files", new List<string>() { ".jpg" });
+            saveFile.FileTypeChoices.Add("PNG files", new List<string>() { ".png" });
+            saveFile.SuggestedFileName = this.tbx_showBarcode.Text.Split('\r')[1];
+            StorageFile sFile = await saveFile.PickSaveFileAsync();
+            if (sFile == null)
+                return;
+            var pixels = await rtb.GetPixelsAsync();
+            using (IRandomAccessStream stream = await sFile.OpenAsync(FileAccessMode.ReadWrite)) {
+                var encoder = await
+                BitmapEncoder.CreateAsync(BitmapEncoder.JpegEncoderId, stream);
+                byte[] bytes = pixels.ToArray();
+                encoder.SetPixelData(BitmapPixelFormat.Bgra8,
+                                        BitmapAlphaMode.Ignore,
+                                        (uint)rtb.PixelWidth,
+                                        (uint)rtb.PixelHeight,
+                                        200,
+                                        200,
+                                        bytes);
+
+                await encoder.FlushAsync();
+            }
+        }
+
+        private void image_showBarcode_PointerPressed(object sender, PointerRoutedEventArgs e) {
+            if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
+                var properties = e.GetCurrentPoint(this).Properties;
+                if (properties.IsRightButtonPressed) {
+                    MessageDialog dialog = new MessageDialog("このイメージが欲しいですか？");
+                    dialog.Commands.Add(new UICommand("Yes", cmd => {
+                        saveImage(this.img_showBarcode);
+                    }, commandId: 0));
+                    dialog.Commands.Add(new UICommand("No", cmd => { }, commandId: 1));
+                    dialog.ShowAsync();
+                }
+            }
+        }
+
+        private void img_showQRCode_PointerPressed(object sender, PointerRoutedEventArgs e) {
+            if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
+                var properties = e.GetCurrentPoint(this).Properties;
+                if (properties.IsRightButtonPressed) {
+                    MessageDialog dialog = new MessageDialog("このイメージが欲しいですか？");
+                    dialog.Commands.Add(new UICommand("Yes", cmd => {
+                        saveImage(this.img_showQRCode);
+                    }, commandId: 0));
+                    dialog.Commands.Add(new UICommand("No", cmd => { }, commandId: 1));
+                    dialog.ShowAsync();
+                }
+            }
         }
     }
 }
