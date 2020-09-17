@@ -9,7 +9,7 @@
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Margin="0,2,1562.4,0" Height="610" VerticalAlignment="Top">
         <TextBox x:Name="tbx_inputBarcode" HorizontalAlignment="Left" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="33" Width="300" FontSize="18" BorderThickness="0,0,0,2" PlaceholderText="バーコードを入力してください" KeyDown="tbx_inputBarcode_KeyDown" />
         <Button x:Name="btn_showBarcodeImage" Content="生成" HorizontalAlignment="Stretch" Margin="300,0,0,0" VerticalAlignment="Top" Click="btn_showBarcodeImage_Click" Background="#FF0066B4" Height="33" Padding="0,0,0,0" Foreground="White"/>
-        <TextBox x:Name="textBox1" Margin="1,33,55,0" TextWrapping="Wrap" Text="入力が完了したら、そのまま改行すればいいです" VerticalAlignment="Top" Height="26" FontSize="12" BorderThickness="0" Foreground="Brown"/>
+        <TextBox x:Name="textBox1" Margin="1,33,55,0" TextWrapping="Wrap" Text="入力が完了したら、そのまま改行すればいいです" VerticalAlignment="Top" Height="26" FontSize="12" BorderThickness="0" Foreground="Brown" IsReadOnly="True"/>
         <Button x:Name="btn_simpleMode" Content="簡易モード" HorizontalAlignment="Left" Margin="0,67,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.754,0.188" Height="42" Width="356" FontSize="16" Click="btn_simpleMode_Click" Background="#FF0066B4" Foreground="White"/>
         <Image x:Name="img_showBarcode" Margin="1,113,-1,397" RenderTransformOrigin="0.5,1" Height="100" Width="356" VerticalAlignment="Center"/>
         <TextBox x:Name="tbx_showBarcode" HorizontalAlignment="Left" Margin="0,213,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="355" FontSize="14" BorderThickness="0,0,0,2" PlaceholderText="現在のバーコードは：" RenderTransformOrigin="0.493,0.224"/>
