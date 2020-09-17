@@ -1,4 +1,5 @@
-﻿using CreateBarCodeTool.Utils;
+﻿using CreateBarCodeTool.Dto;
+using CreateBarCodeTool.Utils;
 using System;
 using Windows.Foundation;
 using Windows.UI.Popups;
@@ -241,7 +242,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TWOFIVEJAN));
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TWOFIVEJAN),this.btn_25Jan, BarcodeDBSchema.BarcodeTable.Cols.TWOFIVEJAN);
                 }
             }
         }
@@ -250,7 +251,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TWENTYFORBIDDEN));
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TWENTYFORBIDDEN),this.btn_twentyForbidden, BarcodeDBSchema.BarcodeTable.Cols.TWENTYFORBIDDEN);
                 }
             }
         }
@@ -259,7 +260,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.DRUG));
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.DRUG),this.btn_drug, BarcodeDBSchema.BarcodeTable.Cols.DRUG);
                 }
             }
         }
@@ -268,7 +269,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.SECURITY));
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.SECURITY),this.btn_security, BarcodeDBSchema.BarcodeTable.Cols.SECURITY);
                 }
             }
         }
@@ -277,7 +278,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.DISCOUNT));
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.DISCOUNT),this.btn_discount, BarcodeDBSchema.BarcodeTable.Cols.DISCOUNT);
                 }
             }
         }
@@ -286,7 +287,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.HEAD0));
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.HEAD0),this.btn_head0, BarcodeDBSchema.BarcodeTable.Cols.HEAD0);
                 }
             }
         }
@@ -295,7 +296,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.POSA));
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.POSA),this.btn_POSA, BarcodeDBSchema.BarcodeTable.Cols.POSA);
                 }
             }
         }
@@ -304,7 +305,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.MARUKYU));
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.MARUKYU),this.btn_marukyu, BarcodeDBSchema.BarcodeTable.Cols.MARUKYU);
                 }
             }
         }
@@ -313,7 +314,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TAMARU));
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TAMARU),this.btn_tamaruCoupon, BarcodeDBSchema.BarcodeTable.Cols.TAMARU);
                 }
             }
         }
@@ -322,7 +323,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.BRANDSWITCH));
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.BRANDSWITCH),this.btn_brandSwich, BarcodeDBSchema.BarcodeTable.Cols.BRANDSWITCH);
                 }
             }
         }
@@ -331,7 +332,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TIMESCOUPON));
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TIMESCOUPON),this.btn_timesCoupon, BarcodeDBSchema.BarcodeTable.Cols.TIMESCOUPON);
                 }
             }
         }
@@ -340,7 +341,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.PERIOD));
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.PERIOD),this.btn_period, BarcodeDBSchema.BarcodeTable.Cols.PERIOD);
                 }
             }
         }
@@ -349,7 +350,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.BAG));
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.BAG),this.btn_bag, BarcodeDBSchema.BarcodeTable.Cols.BAG);
                 }
             }
         }
@@ -358,7 +359,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.ZEROPRICE));
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.ZEROPRICE),this.btn_zeroPrice, BarcodeDBSchema.BarcodeTable.Cols.ZEROPRICE);
                 }
             }
         }
@@ -367,7 +368,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.CAMPAIN));
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.CAMPAIN), this.btn_campain, BarcodeDBSchema.BarcodeTable.Cols.CAMPAIN);
                 }
             }
         }
@@ -376,7 +377,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.GATE));
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.GATE),this.btn_gate, BarcodeDBSchema.BarcodeTable.Cols.GATE);
                 }
             }
         }
@@ -385,15 +386,19 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.STAFF));
+                    showJanCodeMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.STAFF),this.btn_staff,BarcodeDBSchema.BarcodeTable.Cols.STAFF);
                 }
             }
         }
 
-        private async void showJanCodeMessage(string janCode) {
+        private async void showJanCodeMessage(string janCode, Button button, string colName) {
             MessageDialog dialog = new MessageDialog("このボタンのJANは： " + janCode, "メッセージ");
             dialog.Commands.Add(new UICommand("OK", cmd => { }, commandId: 0));
-            dialog.Commands.Add(new UICommand("改修", cmd => { }, commandId: 1));
+            dialog.Commands.Add(new UICommand("改修", cmd => {
+                Frame root = Window.Current.Content as Frame;
+                JanBindButton janBindButton = new JanBindButton(janCode,button, colName);
+                root.Navigate(typeof(JanReset), janBindButton);
+            }, commandId: 1));
             await dialog.ShowAsync();
         }
 

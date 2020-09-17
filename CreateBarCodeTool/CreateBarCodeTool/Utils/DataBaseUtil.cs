@@ -143,5 +143,12 @@ namespace CreateBarCodeTool.Utils {
             }
             return result;
         }
+
+        public void updateJanCode(string colName,string janCode) {
+            using (var statement = this.conn.Prepare("update " + BarcodeDBSchema.BarcodeTable.NAME + " set " + colName + " = ?")) {
+                statement.Bind(1, janCode);
+                SQLiteResult sqliteResult = statement.Step();
+            }
+        }
     }
 }
