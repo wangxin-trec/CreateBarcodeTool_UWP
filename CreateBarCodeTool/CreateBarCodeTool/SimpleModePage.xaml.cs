@@ -170,7 +170,7 @@ namespace CreateBarCodeTool {
             if (e.Pointer.PointerDeviceType == Windows.Devices.Input.PointerDeviceType.Mouse) {
                 var properties = e.GetCurrentPoint(this).Properties;
                 if (properties.IsRightButtonPressed) {
-                    showPrePaidCardMessage(BarcodeDBSchema.BarcodeTable.Cols.TESTTWO,"2222");
+                    showPrePaidCardMessage(DataBaseUtil.getSingleton().queryJanFromDB(BarcodeDBSchema.BarcodeTable.Cols.TESTTWO), "2222");
                 }
             }
         }
