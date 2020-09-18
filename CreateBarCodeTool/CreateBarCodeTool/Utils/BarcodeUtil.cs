@@ -12,8 +12,9 @@ namespace CreateBarCodeTool.Utils {
                 BarcodeWriter barcodeWriter = new BarcodeWriter();
                 barcodeWriter.Format = BarcodeFormat.CODE_128;
                 EncodingOptions options = new EncodingOptions();
-                options.Width = 356;
-                options.Height = 100;
+                options.Width = 270;
+                options.Height = 270;
+                options.PureBarcode = false;
                 barcodeWriter.Options = options;
                 WriteableBitmap writeableBitmap = barcodeWriter.Write(content);
                 return writeableBitmap;
@@ -30,6 +31,7 @@ namespace CreateBarCodeTool.Utils {
                 options.CharacterSet = "UTF-8";
                 options.Width = 270;
                 options.Height = 270;
+                options.PureBarcode = false;
                 barcodeWriter.Options = options;
                 WriteableBitmap writeableBitmap = barcodeWriter.Write(content);
                 return writeableBitmap;
